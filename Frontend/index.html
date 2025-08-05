@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VibeWrite | Dashboard</title>
+    <title>VibeWrite</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -85,17 +86,14 @@
                             <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200">
                                 <a href="#profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                                <a href="#"data-logout class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
-
-            <!-- Main content area -->
             <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-50">
-                <div id="app-content" class="max-w-6xl mx-auto">
-                    <!-- Content will be loaded here dynamically -->
+                <div id="app-content" class="max-w-6xl mx-auto">     
                 </div>
             </main>
         </div>
@@ -104,5 +102,20 @@
     <script src="js/utils.js"></script>
     <script src="js/router.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const isAuthenticated = localStorage.getItem('vibewrite-authenticated');
+        
+        if (!isAuthenticated) {
+            window.location.href = 'auth/login.html';
+        }
+        document.querySelectorAll('[data-logout]').forEach(button => {
+            button.addEventListener('click', function() {
+                localStorage.removeItem('vibewrite-authenticated');
+                window.location.href = 'auth/login.html';
+            });
+        });
+    });
+</script>
 </body>
 </html>
