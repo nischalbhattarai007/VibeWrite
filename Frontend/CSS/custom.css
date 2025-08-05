@@ -41,3 +41,49 @@
     border-color: #9f7aea;
     box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
 }
+/* Gradient background for auth pages */
+.auth-bg {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+}
+
+/* Dashboard background */
+.dashboard-bg {
+    background: #f8fafc;
+}
+
+/* Card styling */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    transform: translateY(-2px);
+}
+
+/* Updated color palette */
+.bg-primary {
+    background-color: #6366f1;
+}
+
+.hover\:bg-primary:hover {
+    background-color: #4f46e5;
+}
+
+.text-primary {
+    color: #6366f1;
+}
+
+.border-primary {
+    border-color: #6366f1;
+}
+
+/* Glass effect for header */
+.glass-header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
