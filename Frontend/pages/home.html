@@ -1,0 +1,82 @@
+<div>
+    <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-bold text-gray-800">Your Feed</h2>
+        <div class="relative">
+            <select class="appearance-none bg-white border border-gray-300 rounded-lg px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                <option>Latest</option>
+                <option>Popular</option>
+                <option>Following</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-y-6">
+        <!-- Blog Post Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Author" class="h-10 w-10 rounded-full object-cover">
+                    <div class="ml-3">
+                        <p class="text-sm font-medium">Sarah Johnson</p>
+                        <p class="text-xs text-gray-500">5 days ago · 5 min read</p>
+                    </div>
+                </div>
+                <div class="md:flex">
+                    <div class="md:flex-1 md:pr-6">
+                        <h3 class="text-xl font-bold mb-2 hover:text-purple-600 transition-colors">
+                            <a href="#">The Future of Web Development in 2023</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">Exploring the latest trends and technologies that will shape the web development landscape in the coming year...</p>
+                        <div class="flex items-center text-sm">
+                            <span class="text-gray-500 mr-4"><i class="far fa-heart mr-1"></i> 42</span>
+                            <span class="text-gray-500 mr-4"><i class="far fa-comment mr-1"></i> 8</span>
+                            <span class="text-gray-500"><i class="far fa-bookmark mr-1"></i> Save</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 md:w-32">
+                        <img src="https://source.unsplash.com/random/200x200/?web,development" alt="Post thumbnail" class="w-full h-32 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Post Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+            <div class="p-6">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Author" class="h-10 w-10 rounded-full object-cover">
+                    <div class="ml-3">
+                        <p class="text-sm font-medium">Michael Chen</p>
+                        <p class="text-xs text-gray-500">2 weeks ago · 8 min read</p>
+                    </div>
+                </div>
+                <div class="md:flex">
+                    <div class="md:flex-1 md:pr-6">
+                        <h3 class="text-xl font-bold mb-2 hover:text-purple-600 transition-colors">
+                            <a href="#">Mastering Tailwind CSS: Tips and Tricks</a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">Learn how to leverage the full power of Tailwind CSS with these advanced techniques and best practices...</p>
+                        <div class="flex items-center text-sm">
+                            <span class="text-gray-500 mr-4"><i class="far fa-heart mr-1"></i> 89</span>
+                            <span class="text-gray-500 mr-4"><i class="far fa-comment mr-1"></i> 14</span>
+                            <span class="text-gray-500"><i class="far fa-bookmark mr-1"></i> Save</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 md:mt-0 md:w-32">
+                        <img src="https://source.unsplash.com/random/200x200/?css,tailwind" alt="Post thumbnail" class="w-full h-32 object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load more button -->
+        <div class="text-center mt-8">
+            <button class="px-6 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all">
+                Load More Posts
+            </button>
+        </div>
+    </div>
+</div>

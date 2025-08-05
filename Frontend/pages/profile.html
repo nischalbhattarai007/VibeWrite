@@ -1,0 +1,133 @@
+<div>
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Profile Settings</h2>
+
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="p-6">
+            <form>
+                <div class="space-y-6">
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/3">
+                            <label class="block text-sm font-medium text-gray-700">Profile Photo</label>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3 flex items-center">
+                            <img src="assets/images/avatar.jpg" alt="User avatar" class="h-16 w-16 rounded-full object-cover">
+                            <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-lg shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                                Change
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/3">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3">
+                            <input type="text" id="name" class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" value="John Doe">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/3">
+                            <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3">
+                            <input type="text" id="username" class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" value="johndoe">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-center">
+                        <div class="md:w-1/3">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3">
+                            <input type="email" id="email" class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500" value="john.doe@example.com">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-start">
+                        <div class="md:w-1/3">
+                            <label for="bio" class="block text-sm font-medium text-gray-700">Bio</label>
+                            <p class="text-xs text-gray-500 mt-1">Brief description for your profile.</p>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3">
+                            <textarea id="bio" rows="3" class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500">Frontend developer passionate about creating beautiful, user-friendly interfaces. Love writing about JavaScript and CSS.</textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row md:items-start">
+                        <div class="md:w-1/3">
+                            <label class="block text-sm font-medium text-gray-700">Social Links</label>
+                            <p class="text-xs text-gray-500 mt-1">Add links to your social profiles.</p>
+                        </div>
+                        <div class="mt-1 md:mt-0 md:w-2/3 space-y-3">
+                            <div class="flex">
+                                <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                                    twitter.com/
+                                </span>
+                                <input type="text" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500" placeholder="yourusername">
+                            </div>
+                            <div class="flex">
+                                <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                                    github.com/
+                                </span>
+                                <input type="text" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500" placeholder="yourusername">
+                            </div>
+                            <div class="flex">
+                                <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                                    linkedin.com/in/
+                                </span>
+                                <input type="text" class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-r-lg border border-gray-300 focus:ring-purple-500 focus:border-purple-500" placeholder="yourusername">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5">
+                        <div class="flex justify-end">
+                            <button type="button" class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                                Cancel
+                            </button>
+                            <button type="submit" class="ml-3 px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-6 bg-white rounded-xl shadow-sm overflow-hidden">
+        <div class="px-6 py-5 border-b border-gray-200">
+            <h3 class="text-lg font-medium leading-6 text-gray-900">Account Settings</h3>
+        </div>
+        <div class="p-6">
+            <div class="space-y-6">
+                <div>
+                    <h4 class="text-sm font-medium text-gray-900">Change Password</h4>
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <label for="current-password" class="block text-sm font-medium text-gray-700">Current Password</label>
+                            <input type="password" id="current-password" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                        <div>
+                            <label for="new-password" class="block text-sm font-medium text-gray-700">New Password</label>
+                            <input type="password" id="new-password" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                        <div>
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm New Password</label>
+                            <input type="password" id="confirm-password" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-gray-200">
+                    <h4 class="text-sm font-medium text-gray-900">Delete Account</h4>
+                    <p class="mt-1 text-sm text-gray-500">Once you delete your account, there is no going back. Please be certain.</p>
+                    <button type="button" class="mt-4 px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Delete Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

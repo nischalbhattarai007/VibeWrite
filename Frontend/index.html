@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeWrite | Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="hidden md:flex md:flex-shrink-0">
+            <div class="flex flex-col w-64 bg-white border-r border-gray-200">
+                <div class="flex items-center justify-center h-16 px-4 border-b border-gray-200">
+                    <div class="flex items-center">
+                        <img src="assets/images/logo.png" alt="VibeWrite" class="h-8 w-auto">
+                        <span class="ml-2 text-xl font-bold text-purple-600">VibeWrite</span>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow px-4 py-4 overflow-y-auto">
+                    <nav class="flex-1 space-y-2">
+                        <a href="#home" class="sidebar-link flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200">
+                            <i class="fas fa-home mr-3 text-lg"></i>
+                            Home
+                        </a>
+                        <a href="#my-posts" class="sidebar-link flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200">
+                            <i class="fas fa-file-alt mr-3 text-lg"></i>
+                            My Posts
+                        </a>
+                        <a href="#create-post" class="sidebar-link flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200">
+                            <i class="fas fa-plus-circle mr-3 text-lg"></i>
+                            Create Post
+                        </a>
+                        <a href="#followers" class="sidebar-link flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200">
+                            <i class="fas fa-users mr-3 text-lg"></i>
+                            Followers
+                        </a>
+                        <a href="#profile" class="sidebar-link flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200">
+                            <i class="fas fa-user-cog mr-3 text-lg"></i>
+                            Profile
+                        </a>
+                    </nav>
+                    <div class="mt-auto pt-4 border-t border-gray-200">
+                        <button class="w-full flex items-center justify-center px-4 py-2 bg-purple-600 text-white text-sm font-medium rounded-lg hover:bg-purple-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
+                            <i class="fas fa-pen-fancy mr-2"></i>
+                            New Post
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile sidebar backdrop -->
+        <div id="sidebar-backdrop" class="fixed inset-0 z-20 bg-black bg-opacity-50 hidden md:hidden"></div>
+
+        <!-- Mobile sidebar -->
+        <aside id="mobile-sidebar" class="fixed inset-y-0 left-0 z-30 w-64 bg-white transform -translate-x-full transition-transform duration-200 ease-in-out md:hidden">
+            <!-- Same content as desktop sidebar -->
+        </aside>
+
+        <!-- Main content -->
+        <div class="flex flex-col flex-1 overflow-hidden">
+            <!-- Top navigation -->
+            <header class="bg-white border-b border-gray-200">
+                <div class="flex items-center justify-between px-4 py-3">
+                    <div class="flex items-center">
+                        <button id="mobile-sidebar-toggle" class="mr-4 text-gray-500 hover:text-gray-600 focus:outline-none md:hidden">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                        <h1 class="text-lg font-semibold" id="page-title">Dashboard</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 text-gray-500 hover:text-gray-600 focus:outline-none relative">
+                            <i class="fas fa-bell text-xl"></i>
+                            <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                        </button>
+                        <div class="relative">
+                            <button id="user-menu-button" class="flex items-center focus:outline-none">
+                                <img src="assets/images/avatar.jpg" alt="User avatar" class="h-8 w-8 rounded-full object-cover">
+                                <span class="ml-2 text-sm font-medium hidden md:inline">John Doe</span>
+                                <i class="fas fa-chevron-down ml-1 text-xs text-gray-500 hidden md:inline"></i>
+                            </button>
+                            <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200">
+                                <a href="#profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main content area -->
+            <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-50">
+                <div id="app-content" class="max-w-6xl mx-auto">
+                    <!-- Content will be loaded here dynamically -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
