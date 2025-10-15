@@ -1,1 +1,2 @@
-fixed buged!!!!
+fixed buged !!!!!!!!!!!!
+
